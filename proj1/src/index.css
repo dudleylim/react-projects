@@ -12,6 +12,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: yellow;
 }
 
 code {
@@ -21,5 +22,24 @@ code {
 
 .main-container
 {
-  background-color: yellow;
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  margin: 5rem 7rem;
+  padding: 2rem;
+  gap: 0.5rem;
+}
+
+.main-reset-button
+{
+  width: 100%;
+  height: 2rem;
+  border: none;
+  background-color: rgb(233, 122, 140);
+  color: white;
+}
+.main-reset-button:hover
+{
+  cursor: pointer;
+  background-color: rgba(233, 122, 140, 0.7);
 }

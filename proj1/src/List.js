@@ -1,20 +1,21 @@
-import React from "react";
+import React, { useState } from "react";
 import data from './data';
 
-const List = () => {
+const List = ({stuff}) => {
     return(
         <>
-            <h1>List</h1>
-            {data.map(dat => {
+            {stuff.map(stuf => {
+                // destructure each object
+                const {id, name, age} = stuf;
                 return (
-                    <div className="main-list-item">
-                        <h2>{dat.name}</h2>
-                        <p>{dat.age}</p>
+                    <div key={id} className="main-list-item">
+                        <h2>{name}</h2>
+                        <p>{age}</p>
                     </div>
-                )
+                );
             })}
         </>
-    )
+    );
 };
 
 export default List;
