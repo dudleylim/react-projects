@@ -1,9 +1,7 @@
-import React, {useState, useEffect} from "react";
-
-const MultipleReturns = () => {
+const Loading = () => {
     return (
         <h1>Loading...</h1>
     );
 };
 
-export default MultipleReturns;
+export default Loading;
