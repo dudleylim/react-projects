@@ -1,0 +1,62 @@
+*
+{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style-type: none;
+}
+
+body, html
+{
+  height: 100%;
+}
+
+body
+{
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code
+{
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+.main-slide-list
+{
+  display: grid;
+  /* grid-template-columns: [previous-start] 1fr [previous-end] [active-start] 3fr [active-end] [next-start] 1fr [next-end]; */
+  grid-template-columns: [previous-item-start] 1fr [previous-item-end active-item-start] 5fr [active-item-end next-item-start] 1fr [next-item-end];
+  /* position: relative; */
+  align-items: start;
+}
+
+.slide-item
+{
+  opacity: 0.2;
+  transition-duration: 1s;
+  /* position: relative; */
+}
+
+.slide-item.previous
+{
+  grid-column: previous-item;
+}
+
+.slide-item.next
+{
+  grid-column: next-item;
+}
+
+.slide-item.active
+{
+  grid-column: active-item;
+  opacity: 1;
+  transition-duration: 1s;
+  /* position: absolute; */
+}
